@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="design.css">
+    <title>REHAB.UA</title>
+</head>
+<body>
+    <header>
+        <div class="top-section">
+            <div class="site-info">
+                <img src="лого.jpg">
+                <h1>REHAB.UA</h1>
+                <div class="header-buttons">
+                    <div class="location-button">
+                        <img class = "locationimage"src="location.png" alt="Місцезнаходження">
+                        <p class="location-text">МІСЦЕЗНАХОДЖЕННЯ<span class="location-select">Оберіть місцезнаходження</span></p>
+                        <button class="register-button">Зареєструватись</button>
+                        <button class="login-button">Увійти</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <nav class="desktop-nav">
+                <button class="burger-menu1">☰</button>
+                 <a href="project2.html">
+                <button class="active"><span class="button-text">Головна</span></button>
+                </a>
+                <button><span class="button-text">Відділення</span></button>
+                <a href="experiment.html">
+                <button><span class="button-text">Спеціалісти</span></button>
+            </a>
+                <button id="aboutUsButton"><span class="button-text">Про нас</span></button>
+                <button id="supportButton"><span class="button-text">Підтримка</span></button>
+            </nav>
+            <div class="sidebar">
+                <button class="close-sidebar">&#10006;</button>
+                 <a href="project2.html">
+                    <button class="active"><span class="button-text">Головна</span></button>
+                </a>
+                <button><span class="button-text">Відділення</span></button>
+                 <a href="experiment.html">
+                <button><span class="button-text">Спеціалісти</span></button>
+            </a>
+                <button id="aboutUsButton"><span class="button-text">Про нас</span></button>
+                <button id="supportButton"><span class="button-text">Підтримка</span></button>
+    </div>
+            <nav class="mobile-nav">
+                <button class="burger-menu">&#9776;</button>
+                <div class="mobile-menu">
+                     <a href="project2.html">
+                    <button><span class="button-text">Головна</span></button>
+                </a>
+                    <button><span class="button-text">Відділення</span></button>
+                    <a href="experiment.html">
+                    <button><span class="button-text">Спеціалісти</span></button>
+                </a>
+                    <button id="aboutUsButton"><span class="button-text">Про нас</span></button>
+                    <button id="supportButton"><span class="button-text">Підтримка</span></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-left">
+            <img class="foto1" src="ГОЛОВНА1.jpg" alt="фото пацієнта з спеціалістом">
+            <h3 id="about-us-title" class="about-us-title">Про нас</h3>
+            <p class="about-us-text">Ласкаво просимо до нашої системи для реабілітаційних відділень України! <br>Наша мета - забезпечити доступні та ефективні реабілітаційні послуги для всіх громадян України. Ми віримо, що кожна людина заслуговує на можливість повернутися до повноцінного життя після травми, захворювань чи хірургічних втручань. <br>Ми співпрацюємо з провідними фахівцями та реабілітаційнмими відділеннями з усіх куточків України, щоб надати нашим пацієнтам найкращі можливості для відновлення. <br>Дякуємо, що обрали нас для вашої реабілітації!</p>
+            <img class="foto3" src="фото3.jpg" alt="фото пацієнта з спеціалістом">
+        </div>
+        <div class="content-right">
+            <h2 class="map-title">Оберіть найближче відділення</h2>
+            <iframe class="map" src="https://www.youtube.com/embed/mQl3F7b9irY" frameborder="0" allowfullscreen></iframe>
+            <img class="foto2" src="фото2.jpg" alt="фото пацієнта з спеціалістом">
+           <div class="support-section">
+            <h3 id="support-title" class="support-title">Підтримка</h3>
+            <button onclick="toggleForm()", class="submit">Заповнити форму</button>
+            </div>
+            <p class="support-text">Якщо у вас виникли будь-які питання або проблеми, будь ласка, звертайтесь до нас. Наша гаряча лінія за номером 4578 доступна цілодобово, щоб надати оперативну допомогу та консультації. <br> Також, ви можете зв'язатися з нами за допомогою електронної пошти: rehab_ua@gmail.com. Наша команда завжди готова відповісти на ваші запитання та надати необхідну підтримку.</p>
+        </div>
+        <div id="overlay" class="overlay">
+  <div class="form-container">
+    <h2>Форма</h2>
+    <form id="feedbackForm">
+    <div class="form-group">
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Електронна пошта:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="reason">Причина:</label>
+        <select id="reason" name="reason" required>
+            <option value="">Виберіть причину</option>
+            <option value="Запит на консультацію">Запит на консультацію</option>
+            <option value="Технічна підтримка">Технічна підтримка</option>
+            <option value="Інше">Інше</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="message">Повідомлення:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit">Надіслати</button>
+</form>
+  </div>
+</div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+ function toggleForm() {
+    var overlay = document.getElementById("overlay");
+    overlay.classList.toggle("show");
+  }
+        const burgerMenu = document.querySelector('.burger-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        burgerMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        const aboutUsButton = document.getElementById('aboutUsButton');
+        const supportButton = document.getElementById('supportButton');
+
+        aboutUsButton.addEventListener('click', () => {
+            scrollToHeading();
+            setActiveButton(aboutUsButton);
+        });
+
+        supportButton.addEventListener('click', () => {
+            scrollToSupport();
+            setActiveButton(supportButton);
+        });
+
+        function scrollToHeading() {
+            var heading = document.getElementById('about-us-title');
+            heading.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToSupport() {
+            var supportHeading = document.getElementById('support-title');
+            supportHeading.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+
+        function setActiveButton(button) {
+            const buttons = document.querySelectorAll('.desktop-nav button');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+        }document.querySelector('.burger-menu1').addEventListener('click', function() {
+    document.querySelector('.sidebar').classList.toggle('active'); 
+});
+
+document.querySelector('.close-sidebar').addEventListener('click', function() {
+    document.querySelector('.sidebar').classList.remove('active'); 
+});
+
+
+    </script>
+</body>
+</html>

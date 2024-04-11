@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Каталог спеціалістів</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 200px;
+    height: 100%;
+    background-color: #15472C; 
+    color: white; 
+    transition: left 0.6s ease-in-out; 
+    z-index: 999; 
+    padding-top: 60px; 
+}
+
+.sidebar.active {
+    left: 0; 
+}
+
+.sidebar button {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background-color: #15472C; 
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    display: block;
+    width: 100%; 
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.close-sidebar {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 200px;
+    cursor: pointer;
+}
+
+.burger-menu1 {
+    border: thin;
+    position: absolute;
+    margin-top: 100px;
+    margin-left:10px;
+    font-size: 24px;
+    background-color: #15472C;
+    color: white;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.site-info {
+    display: flex;
+    align-items: center;
+}
+
+.site-info img {
+    width: 110px;
+    height: auto;
+}
+a {
+  color: #15472C;
+}
+
+.site-info h1 {
+    margin-left: -15px;
+    font-size: 18px;
+    color: #333;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 670px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .search-form {
+    position: relative;
+  }
+
+  .search-input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+  }
+
+  .search-button {
+    background-color: #15472C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+
+  }
+
+  .product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .product-item {
+    flex: 0 0 calc(22% - 20px); 
+    text-align: center;
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 10px; 
+    overflow: hidden; 
+    margin-bottom: 20px; 
+  }
+
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product-item p {
+    margin-top: 10px;
+  }
+
+  .text {
+
+  }
+  .back {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #15472C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+  }
+</style>
+</head>
+<body>
+  <a href="project2.html">
+<button class="back">Вийти</button>
+</a>
+  <button class="burger-menu1">☰</button>
+<div class="sidebar">
+<button class="close-sidebar">&#10006;</button>
+ <a href="project2.html">
+    <button class="active"><span class="button-text">Головна</span></button>
+</a>
+<button><span class="button-text">Відділення</span></button>
+<a href="experiment.html">
+<button><span class="button-text">Спеціалісти</span></button>
+</a>
+
+<button><span class="button-text">Про нас</span></button>
+<button><span class="button-text">Підтримка</span></button>
+</div>
+<div class="site-info">
+    <img src="лого.jpg">
+   <h1>REHAB.UA</h1>
+</div>
+<div class="container1">
+  <form class="search-form">
+    <input type="text" class="search-input" placeholder="Пошук...">
+    <button type="submit" class="search-button">Пошук</button>
+  </form>
+</div>
+<div class="container">
+  <div class="product-row">
+    <div class="product-item">
+      <img src="doctor5.jpg" alt="Product 1">
+      <p class="text">Лис Ольга Назарівна</p>
+      <a href="detail">Детальніше...</a>
+    </div>
+    <div class="product-item">
+      <img src="doctor6.jpg" alt="Product 2">
+      <p>Дуб Олена Сергіївна</p>
+      <a href="detail">Детальніше...</a>
+    </div>
+    <div class="product-item">
+      <img src="doctor7.jpg" alt="Product 3">
+      <p>Крук Богдана Романівна</p>
+      <a href="detail">Детальніше...</a>
+    </div>
+    <div class="product-item">
+      <img src="doctor3.jpg" alt="Product 4">
+      <p>Ціж Зоряна Василівна</p>
+      <a href="detail">Детальніше...</a>
+    </div>
+  </div>
+
+  <div class="product-row">
+    <div class="product-item">
+      <img src="doctor4.jpg" alt="Product 5">
+      <p>Лис Ольга Назарівна</p>
+      <a href="detail">Детальніше...</a>
+    </div>
+    <div class="product-item">
+      <img src="doctor8.jpg" alt="Product 6">
+      <p>Дуб Олена Сергіївна</p>
+      <a href="detail">Детальніше...</a>
+    </div>
+    <div class="product-item">
+      <img src="doctor9.jpg" alt="Product 7">
+      <p>Лис Ольга Назарівна</p>
+      <a href="detail">Детальніше...</a>
+    </div>
+    <div class="product-item">
+      <img src="doctor1.jpg" alt="Product 8">
+      <p>Лис Ольга Назарівна</p>
+      <a href="detail">Детальніше...</a>
+  </div>
+    <div class="product-row">
+    <div class="product-item">
+      <img src="doctor10.jpg" alt="Product 5">
+      <p>Лис Ольга Назарівна</p>
+      <a href="detail">Детальніше...</a>
+    </div>
+    <div class="product-item">
+      <img src="doctor1.jpg" alt="Product 6">
+      <p>Лис Ольга Назарівна</p>
+      <a href="detail">Детальніше...</a>
+    </div>
+    <div class="product-item">
+      <img src="doctor12.jpg" alt="Product 7">
+      <p>Лис Ольга Назарівна</p>
+      <a href="detail">Детальніше...</a>
+    </div>
+    <div class="product-item">
+      <img src="doctor13.jpg" alt="Product 8">
+      <p>Лис Ольга Назарівна</p>
+      <a href="detail">Детальніше...</a>
+    </div>
+  </div>
+
+<script type="text/javascript">
+ function setActiveButton(button) {
+            const buttons = document.querySelectorAll('.desktop-nav button');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+        }document.querySelector('.burger-menu1').addEventListener('click', function() {
+    document.querySelector('.sidebar').classList.toggle('active'); 
+});
+
+document.querySelector('.close-sidebar').addEventListener('click', function() {
+    document.querySelector('.sidebar').classList.remove('active'); 
+});
+</script>
+</body>
+</html>
